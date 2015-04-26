@@ -10,6 +10,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	setWindowTitle("Linne Vocal GUI 0.01");
+	saveShortCut = new QShortcut(QKeySequence("Ctrl+S"), this);
+	QObject::connect(saveShortCut, SIGNAL(activated()), this, SLOT(on_actionSafe_triggered()));
+
+	openShortCut = new QShortcut(QKeySequence("Ctrl+O"), this);
+	QObject::connect(openShortCut, SIGNAL(activated()), this, SLOT(on_actionOpen_triggered()));
 }
 
 MainWindow::~MainWindow()
@@ -32,6 +37,8 @@ void MainWindow::on_actionSafe_triggered()
 	QString homePath = QDir::homePath();
 	QString file2Name = QFileDialog::getSaveFileName(this,
 		 tr("Save Linne Syntheisier setting"), homePath, tr("LSS Files (*.lss)"));
+	if(file2Name == "")
+		return;
 
 	DbDoc doc;
 	doc.addData("xvsqExec",ui->ledVexPath->text().toLocal8Bit().data());
@@ -57,6 +64,10 @@ void MainWindow::on_actionOpen_triggered()
 	QString homePath = QDir::homePath();
 	QString file2Name = QFileDialog::getOpenFileName(this,
 		 tr("Open Linne Syntheisier setting"), homePath, tr("LSS Files (*.lss)"));
+
+	if(file2Name == "")
+		return;
+
 	load(file2Name);
 }
 

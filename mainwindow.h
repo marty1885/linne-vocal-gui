@@ -5,6 +5,7 @@
 #include <QDir>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QShortcut>
 
 #include <iostream>
 #include <string>
@@ -31,11 +32,13 @@ private slots:
 	void on_btnRun_clicked();
 	void on_actionSafe_triggered();
 	void on_actionOpen_triggered();
-
 	void on_actionAbout_triggered();
 
 private:
 	Ui::MainWindow *ui;
+	QShortcut *saveShortCut;
+	QShortcut *openShortCut;
+
 	int load(QString path);
 };
 
