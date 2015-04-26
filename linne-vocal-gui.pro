@@ -15,8 +15,11 @@ QMAKE_CXXFLAGS += "-std=c++11"
 LIBS += -lsxdb
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    TermainalOutput.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    TermainalOutput.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    TermainalOutput.ui

@@ -6,7 +6,8 @@ using namespace Sxdb;
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
-	ui(new Ui::MainWindow)
+	ui(new Ui::MainWindow),
+	terminal(this)
 {
 	ui->setupUi(this);
 	setWindowTitle("Linne Vocal GUI 0.01");
@@ -34,11 +35,14 @@ MainWindow::~MainWindow()
 void MainWindow::on_btnRun_clicked()
 {
 	QString command = tr("java -jar %1 %2 %3 %4 %5 %6 %7").arg(ui->ledVexPath->text(),ui->ledEfbgwPath->text(),ui->ledWavtPath->text(),ui->ledOtoPath->text(),
-						 ui->ledCsvPath->text(),ui->ledXvsqPath->text(),ui->ledOutPath->text());
+								   ui->ledCsvPath->text(),ui->ledXvsqPath->text(),ui->ledOutPath->text());
+	terminal.command = command;
+	terminal.show();
+	terminal.execute();
 	//cout << command.toLocal8Bit().data() <<endl;
-	int result = system(command.toLocal8Bit().data());
+	/*int result = system(command.toLocal8Bit().data());
 	if(result != 0)
-		QMessageBox::warning(this,"Error","Something is wrong while synthesis",QMessageBox::Yes);
+		QMessageBox::warning(this,"Error","Something is wrong while synthesis",QMessageBox::Yes);*/
 }
 
 void MainWindow::on_actionSafe_triggered()

@@ -16,6 +16,8 @@
 
 #include <sxdb.h>
 
+#include "TermainalOutput.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -42,6 +44,8 @@ private:
 	Ui::MainWindow *ui;
 	QShortcut *saveShortCut;
 	QShortcut *openShortCut;
+
+	TermainalOutput terminal;
 
 	int load(QString path);
 	int save(QString path);
