@@ -34,12 +34,17 @@ private slots:
 	void on_actionOpen_triggered();
 	void on_actionAbout_triggered();
 
+	void on_actionBrowse_XVSQ_triggered();
+
+	void on_actionSet_As_Default_triggered();
+
 private:
 	Ui::MainWindow *ui;
 	QShortcut *saveShortCut;
 	QShortcut *openShortCut;
 
 	int load(QString path);
+	int save(QString path);
 };
 
 #endif // MAINWINDOW_H
