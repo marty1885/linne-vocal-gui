@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="labVexPath">
+          <property name="text">
+           <string>xvsqExec Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labEfbgwPath">
+          <property name="text">
+           <string>efb-gw Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labWavtPath">
+          <property name="text">
+           <string>WaveTool Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labOtoPath">
+          <property name="text">
+           <string>oto.ini Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labCsvPath">
+          <property name="text">
+           <string>csv Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labXvsqPath">
+          <property name="text">
+           <string>XVSQ Path</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labOutPath">
+          <property name="text">
+           <string>Out Path</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="ledVexPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledEfbgwPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledWavtPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledOtoPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledCsvPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledXvsqPath"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ledOutPath"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="btnRun">
+      <property name="text">
+       <string>synthesis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>817</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuKssalkasksadn">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionSafe"/>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuKssalkasksadn"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSafe">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
